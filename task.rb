@@ -14,4 +14,8 @@ class Task
 	def change_status
 		@status = !@status
 	end
+
+	def to_h
+		{ name: @name, deadline: @deadline, status: @status }
+	end
 end
