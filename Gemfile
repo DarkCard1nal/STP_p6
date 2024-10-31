@@ -4,7 +4,5 @@ source 'https://rubygems.org'
 gem 'rubocop', require: false
 
 group :test do
-	gem 'minitest'
-	gem 'minitest-rails'
-	gem 'minitest-reporters'
+	gem 'rspec'
 end
