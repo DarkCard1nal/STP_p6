@@ -2,6 +2,8 @@
 
 # class TaskList is responsible for interacting with tasks
 class TaskList
+	attr_reader :tasks
+
 	def initialize(tasks = [])
 		@tasks = tasks
 	end
