@@ -38,7 +38,7 @@ module FileManager
 	end
 
 	def self.writable_file(file_path1, file_path2)
-		return file_path1 if File.exist?(file_path1) ? File.writable?(file_path2) : true
+		return file_path1 if File.exist?(file_path1) ? File.writable?(file_path1) : true
 		return file_path2 if File.exist?(file_path2) ? File.writable?(file_path2) : true
 
 		nil

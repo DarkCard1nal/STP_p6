@@ -1,0 +1,17 @@
+[
+  {
+    "name": "task1",
+    "deadline": "2025.01.01",
+    "status": false
+  },
+  {
+    "name": "task2",
+    "deadline": "2025.01.03",
+    "status": false
+  },
+  {
+    "name": "task3",
+    "deadline": "2025.01.01",
+    "status": true
+  }
+]

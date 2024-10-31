@@ -16,6 +16,14 @@ class TaskList
 		@tasks.push(task)
 	end
 
+	def get(index)
+		if index.negative? || index >= @tasks.size
+			nil
+		else
+			@tasks[index]
+		end
+	end
+
 	def delete_at(index)
 		@tasks.delete_at(index)
 	end
@@ -32,14 +40,14 @@ class TaskList
 		@tasks.sort_by! { |task| [task.status ? 1 : 0, task.deadline, task.name] }
 	end
 
-	def filter_tasks_by_field(tasks, field, value)
-		tasks.select { |task| task.send(field).to_s.casecmp(value.to_s).zero? }
+	def filter_tasks_by_field(field, value)
+		@tasks.select { |task| task.send(field).to_s.casecmp(value.to_s).zero? }
 	end
 
 	def print_to_s(tasks = @tasks)
 		result = "№, Name, Status, Dedline \n"
-		tasks.each_wich_index do |task, i|
-			result += "#{i}, #{task.name}, #{task.status}, #{task.deadline} \n"
+		tasks.each_with_index do |task, i|
+			result += "#{i + 1}, #{task.name}, #{task.status}, #{task.deadline} \n"
 		end
 
 		result
