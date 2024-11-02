@@ -1,4 +1,4 @@
-# STP_p5
+# STP_p6
 
 _Created for the course "Stack of programming technologies" V. N. Karazin Kharkiv National University_
 
